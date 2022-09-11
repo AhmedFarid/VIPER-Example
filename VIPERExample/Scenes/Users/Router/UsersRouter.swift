@@ -9,7 +9,6 @@ import UIKit
 
 class UsersRouter: UsersRouterProtocol {
   
-  
   weak var viewController: UIViewController?
   
   static func createModule() -> UIViewController{
@@ -23,8 +22,11 @@ class UsersRouter: UsersRouterProtocol {
     return view
   }
   
-  func navigateToDetailsView(withUser: User) {
-    print(withUser.name)
+  func navigateToDetailsView(from view: UsersViewProtocol? ,withUser: User) {
+    let userDetailsViewController = UserDetailsRouter.createModule(user: withUser)
+    if let viewController = view as? UIViewController {
+      viewController.navigationController?.pushViewController(userDetailsViewController, animated: true)
+    }
   }
   
   

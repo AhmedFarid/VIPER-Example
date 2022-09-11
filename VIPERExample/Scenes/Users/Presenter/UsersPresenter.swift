@@ -50,7 +50,7 @@ class UsersPresenter: UsersPresenterProtocol, UsersInteractorOutputProtocol {
   
   func didSelectRow(indexPath: IndexPath) {
     let user = users[indexPath.row]
-    router.navigateToDetailsView(withUser: user)
+    router.navigateToDetailsView(from: view, withUser: user)
   }
 
 }

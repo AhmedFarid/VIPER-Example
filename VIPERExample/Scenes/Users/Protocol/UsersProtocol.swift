@@ -23,7 +23,7 @@ protocol UsersPresenterProtocol: AnyObject {
 }
 
 protocol UsersRouterProtocol {
-  func navigateToDetailsView(withUser : User)
+  func navigateToDetailsView(from view: UsersViewProtocol? ,withUser: User)
 }
 
 protocol UsersInteractorInputProtocol {

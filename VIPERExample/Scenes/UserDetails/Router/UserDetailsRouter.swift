@@ -10,13 +10,11 @@ import UIKit
 class UserDetailsRouter: UserDetailsRouterProtocol {
   var viewController: UIViewController?
   
-  static func createModule() -> UIViewController {
+  static func createModule(user: User) -> UIViewController {
     let view = UserDetailsViewController(nibName: "UserDetailsViewController", bundle: nil)
-    let interactor = UserDetailsInteractor()
     let router = UserDetailsRouter()
-    let presenter = UserDetailsPresenter(view: view, interactor: interactor, router: router)
+    let presenter = UserDetailsPresenter(view: view, router: router, user: user)
     view.presenter = presenter
-    interactor.presenter = presenter
     router.viewController = view
     return view
   }

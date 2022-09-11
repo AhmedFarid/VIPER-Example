@@ -10,10 +10,8 @@
 		83D3876795806428D7A14547 /* Pods_VIPERExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062272757C433C17B3B27A7F /* Pods_VIPERExample.framework */; };
 		E247FC2528CE3253007584C6 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E247FC2328CE3253007584C6 /* UserDetailsViewController.swift */; };
 		E247FC2628CE3253007584C6 /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E247FC2428CE3253007584C6 /* UserDetailsViewController.xib */; };
-		E247FC2828CE327C007584C6 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E247FC2728CE327B007584C6 /* UserDetails.swift */; };
 		E247FC2E28CE330C007584C6 /* UserDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E247FC2D28CE330C007584C6 /* UserDetailsProtocol.swift */; };
 		E247FC3028CE33E5007584C6 /* UserDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E247FC2F28CE33E5007584C6 /* UserDetailsRouter.swift */; };
-		E247FC3228CE3484007584C6 /* UserDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E247FC3128CE3484007584C6 /* UserDetailsInteractor.swift */; };
 		E247FC3428CE34C1007584C6 /* UserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E247FC3328CE34C1007584C6 /* UserDetailsPresenter.swift */; };
 		FA839F5D28CD2ED200F5F2C7 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA839F5B28CD2ED200F5F2C7 /* UsersViewController.swift */; };
 		FA839F5E28CD2ED200F5F2C7 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA839F5C28CD2ED200F5F2C7 /* UsersViewController.xib */; };
@@ -43,10 +41,8 @@
 		D72813BE5220D2C61082E98A /* Pods-VIPERExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERExample.debug.xcconfig"; path = "Target Support Files/Pods-VIPERExample/Pods-VIPERExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E247FC2328CE3253007584C6 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		E247FC2428CE3253007584C6 /* UserDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailsViewController.xib; sourceTree = "<group>"; };
-		E247FC2728CE327B007584C6 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		E247FC2D28CE330C007584C6 /* UserDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsProtocol.swift; sourceTree = "<group>"; };
 		E247FC2F28CE33E5007584C6 /* UserDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRouter.swift; sourceTree = "<group>"; };
-		E247FC3128CE3484007584C6 /* UserDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsInteractor.swift; sourceTree = "<group>"; };
 		E247FC3328CE34C1007584C6 /* UserDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenter.swift; sourceTree = "<group>"; };
 		E79BC3C55DF9C3DC4B38BAFA /* Pods-VIPERExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERExample.release.xcconfig"; path = "Target Support Files/Pods-VIPERExample/Pods-VIPERExample.release.xcconfig"; sourceTree = "<group>"; };
 		FA839F5B28CD2ED200F5F2C7 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +105,6 @@
 				E247FC2928CE32D7007584C6 /* Protocol */,
 				E247FC2C28CE32F3007584C6 /* Router */,
 				E247FC2B28CE32EA007584C6 /* Presenter */,
-				E247FC2A28CE32E4007584C6 /* Interactor */,
 				E247FC2228CE322B007584C6 /* ViewController */,
 			);
 			path = UserDetails;
@@ -130,14 +125,6 @@
 				E247FC2D28CE330C007584C6 /* UserDetailsProtocol.swift */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		E247FC2A28CE32E4007584C6 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				E247FC3128CE3484007584C6 /* UserDetailsInteractor.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		E247FC2B28CE32EA007584C6 /* Presenter */ = {
@@ -295,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				FAE07E7628CD22ED00A0FDD3 /* User.swift */,
-				E247FC2728CE327B007584C6 /* UserDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -438,7 +424,6 @@
 				FAE07E7728CD22ED00A0FDD3 /* User.swift in Sources */,
 				FA839F6828CD3EB100F5F2C7 /* UsersRouter.swift in Sources */,
 				FAD4E73A28CD2487002D4A6F /* UserRouter.swift in Sources */,
-				E247FC3228CE3484007584C6 /* UserDetailsInteractor.swift in Sources */,
 				E247FC2E28CE330C007584C6 /* UserDetailsProtocol.swift in Sources */,
 				FAE07E6628CD22C800A0FDD3 /* ViewController.swift in Sources */,
 				FA839F7628CD498A00F5F2C7 /* UserWorker.swift in Sources */,
@@ -450,7 +435,6 @@
 				FA839F6E28CD3F3700F5F2C7 /* UserInteractor.swift in Sources */,
 				E247FC2528CE3253007584C6 /* UserDetailsViewController.swift in Sources */,
 				E247FC3428CE34C1007584C6 /* UserDetailsPresenter.swift in Sources */,
-				E247FC2828CE327C007584C6 /* UserDetails.swift in Sources */,
 				FA839F6528CD376F00F5F2C7 /* UserViewController + Delegates.swift in Sources */,
 				FAD4E73C28CD24A6002D4A6F /* Constants.swift in Sources */,
 				FA839F5D28CD2ED200F5F2C7 /* UsersViewController.swift in Sources */,

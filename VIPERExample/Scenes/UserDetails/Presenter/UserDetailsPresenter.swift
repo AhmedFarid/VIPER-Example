@@ -7,27 +7,21 @@
 
 import Foundation
 
-class UserDetailsPresenter: UserDetailsPresenterProtocol, userDetailsInteractorOutputProtocol {
+class UserDetailsPresenter: UserDetailsPresenterProtocol {
   
- 
   weak var view: UserDetailsViewProtocol?
-  private let interactor: userDetailsInteractorInputProtocol
   private let router: UserDetailsRouterProtocol
-  
-  var userName: String {
-    return ""
-  }
-  
-  
-  init(view: UserDetailsViewProtocol, interactor: userDetailsInteractorInputProtocol, router: UserDetailsRouterProtocol) {
+  private var user: User
+    
+  init(view: UserDetailsViewProtocol, router: UserDetailsRouterProtocol,user: User) {
     self.view = view
-    self.interactor = interactor
     self.router = router
+    self.user = user
   }
   
   func viewDidLoad() {
-    // get userDetails data
     view?.showLoadingIndicator()
-    // interactor.getData()
+    view?.updateUser(name: user.username ?? "")
+    view?.hideLoadingIndicator()
   }
 }
