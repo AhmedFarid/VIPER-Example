@@ -24,4 +24,8 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     presenter.configure(cell: cell, indexPath: indexPath)
     return cell
   }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    presenter.didSelectRow(indexPath: indexPath)
+  }
 }

@@ -9,6 +9,7 @@ import Foundation
 
 class UsersPresenter: UsersPresenterProtocol, UsersInteractorOutputProtocol {
   
+  
   weak var view: UsersViewProtocol?
   private let interactor: UsersInteractorInputProtocol
   private let router: UsersRouterProtocol
@@ -47,5 +48,9 @@ class UsersPresenter: UsersPresenterProtocol, UsersInteractorOutputProtocol {
     cell.configure(viewModel: viewModel)
   }
   
-  
+  func didSelectRow(indexPath: IndexPath) {
+    let user = users[indexPath.row]
+    router.navigateToDetailsView(withUser: user)
+  }
+
 }

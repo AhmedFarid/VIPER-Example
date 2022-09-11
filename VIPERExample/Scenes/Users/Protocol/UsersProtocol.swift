@@ -19,10 +19,11 @@ protocol UsersPresenterProtocol: AnyObject {
   var numberOfRows: Int { get }
   func viewDidLoad()
   func configure(cell: UsersCellView, indexPath: IndexPath)
+  func didSelectRow(indexPath: IndexPath)
 }
 
 protocol UsersRouterProtocol {
-  
+  func navigateToDetailsView(withUser : User)
 }
 
 protocol UsersInteractorInputProtocol {
@@ -33,7 +34,6 @@ protocol UsersInteractorInputProtocol {
 protocol UsersInteractorOutputProtocol: AnyObject {
   func userFetchedSuccessFully(users: [User])
   func userFetchingFailed(with error: Error)
-  
 }
 
 // Input = Interactor Protocol
