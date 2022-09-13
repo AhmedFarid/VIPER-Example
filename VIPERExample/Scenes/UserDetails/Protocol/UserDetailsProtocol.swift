@@ -22,3 +22,4 @@ protocol UserDetailsPresenterProtocol: AnyObject {
 protocol UserDetailsRouterProtocol {
   
 }
+

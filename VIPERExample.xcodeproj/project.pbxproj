@@ -13,6 +13,18 @@
 		E247FC2E28CE330C007584C6 /* UserDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E247FC2D28CE330C007584C6 /* UserDetailsProtocol.swift */; };
 		E247FC3028CE33E5007584C6 /* UserDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E247FC2F28CE33E5007584C6 /* UserDetailsRouter.swift */; };
 		E247FC3428CE34C1007584C6 /* UserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E247FC3328CE34C1007584C6 /* UserDetailsPresenter.swift */; };
+		E2EA401528D090030082C7C5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA401428D090030082C7C5 /* BaseNavigationController.swift */; };
+		E2EA401928D093960082C7C5 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA401828D093960082C7C5 /* RecipeViewController.swift */; };
+		E2EA401C28D093D60082C7C5 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA401B28D093D60082C7C5 /* RecipesInteractor.swift */; };
+		E2EA401F28D093E90082C7C5 /* RecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA401E28D093E90082C7C5 /* RecipePresenter.swift */; };
+		E2EA402228D093FB0082C7C5 /* RecipeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA402128D093FB0082C7C5 /* RecipeEntity.swift */; };
+		E2EA402528D094130082C7C5 /* RecipeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA402428D094130082C7C5 /* RecipeRouter.swift */; };
+		E2EA402828D094280082C7C5 /* RecipeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA402728D094280082C7C5 /* RecipeProtocols.swift */; };
+		E2EA402A28D09DFF0082C7C5 /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA402928D09DFF0082C7C5 /* Extension + UIViewController.swift */; };
+		E2EA402C28D09F330082C7C5 /* Extension + UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA402B28D09F330082C7C5 /* Extension + UISearchBar.swift */; };
+		E2EA403128D0A09A0082C7C5 /* NetworkLayerRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA403028D0A09A0082C7C5 /* NetworkLayerRecipes.swift */; };
+		E2EA403428D0C48B0082C7C5 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA403328D0C48B0082C7C5 /* RecipeCell.swift */; };
+		E2EA403628D0C4A20082C7C5 /* PaginationSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA403528D0C4A20082C7C5 /* PaginationSpinner.swift */; };
 		FA839F5D28CD2ED200F5F2C7 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA839F5B28CD2ED200F5F2C7 /* UsersViewController.swift */; };
 		FA839F5E28CD2ED200F5F2C7 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA839F5C28CD2ED200F5F2C7 /* UsersViewController.xib */; };
 		FA839F6228CD369F00F5F2C7 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA839F6028CD369F00F5F2C7 /* UsersTableViewCell.swift */; };
@@ -44,6 +56,18 @@
 		E247FC2D28CE330C007584C6 /* UserDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsProtocol.swift; sourceTree = "<group>"; };
 		E247FC2F28CE33E5007584C6 /* UserDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRouter.swift; sourceTree = "<group>"; };
 		E247FC3328CE34C1007584C6 /* UserDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenter.swift; sourceTree = "<group>"; };
+		E2EA401428D090030082C7C5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		E2EA401828D093960082C7C5 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		E2EA401B28D093D60082C7C5 /* RecipesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInteractor.swift; sourceTree = "<group>"; };
+		E2EA401E28D093E90082C7C5 /* RecipePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePresenter.swift; sourceTree = "<group>"; };
+		E2EA402128D093FB0082C7C5 /* RecipeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEntity.swift; sourceTree = "<group>"; };
+		E2EA402428D094130082C7C5 /* RecipeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRouter.swift; sourceTree = "<group>"; };
+		E2EA402728D094280082C7C5 /* RecipeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeProtocols.swift; sourceTree = "<group>"; };
+		E2EA402928D09DFF0082C7C5 /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
+		E2EA402B28D09F330082C7C5 /* Extension + UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UISearchBar.swift"; sourceTree = "<group>"; };
+		E2EA403028D0A09A0082C7C5 /* NetworkLayerRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerRecipes.swift; sourceTree = "<group>"; };
+		E2EA403328D0C48B0082C7C5 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		E2EA403528D0C4A20082C7C5 /* PaginationSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationSpinner.swift; sourceTree = "<group>"; };
 		E79BC3C55DF9C3DC4B38BAFA /* Pods-VIPERExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERExample.release.xcconfig"; path = "Target Support Files/Pods-VIPERExample/Pods-VIPERExample.release.xcconfig"; sourceTree = "<group>"; };
 		FA839F5B28CD2ED200F5F2C7 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		FA839F5C28CD2ED200F5F2C7 /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
@@ -143,9 +167,99 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		E2EA401328D08FE90082C7C5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA401428D090030082C7C5 /* BaseNavigationController.swift */,
+				E2EA402928D09DFF0082C7C5 /* Extension + UIViewController.swift */,
+				E2EA402B28D09F330082C7C5 /* Extension + UISearchBar.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E2EA401628D0937A0082C7C5 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA402028D093EC0082C7C5 /* Entity */,
+				E2EA402328D094040082C7C5 /* Router */,
+				E2EA402628D094180082C7C5 /* Protocols */,
+				E2EA401A28D093B00082C7C5 /* Interactor */,
+				E2EA401D28D093E10082C7C5 /* Presenter */,
+				E2EA401728D093820082C7C5 /* Controller */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		E2EA401728D093820082C7C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA403228D0C46E0082C7C5 /* Cell */,
+				E2EA401828D093960082C7C5 /* RecipeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2EA401A28D093B00082C7C5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA401B28D093D60082C7C5 /* RecipesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E2EA401D28D093E10082C7C5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA401E28D093E90082C7C5 /* RecipePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E2EA402028D093EC0082C7C5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA402128D093FB0082C7C5 /* RecipeEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E2EA402328D094040082C7C5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA402428D094130082C7C5 /* RecipeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E2EA402628D094180082C7C5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA402728D094280082C7C5 /* RecipeProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E2EA402D28D09FCE0082C7C5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4E73B28CD24A6002D4A6F /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E2EA403228D0C46E0082C7C5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA403328D0C48B0082C7C5 /* RecipeCell.swift */,
+				E2EA403528D0C4A20082C7C5 /* PaginationSpinner.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FA839F5828CD2E5A00F5F2C7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E2EA401628D0937A0082C7C5 /* Recipes */,
 				E247FC2128CE3217007584C6 /* UserDetails */,
 				FA839F5928CD2E8A00F5F2C7 /* Users */,
 			);
@@ -241,7 +355,7 @@
 			children = (
 				FAD4E73728CD2476002D4A6F /* NetworkLayer.swift */,
 				FAD4E73928CD2487002D4A6F /* UserRouter.swift */,
-				FAD4E73B28CD24A6002D4A6F /* Constants.swift */,
+				E2EA403028D0A09A0082C7C5 /* NetworkLayerRecipes.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -267,6 +381,8 @@
 		FAE07E6028CD22C800A0FDD3 /* VIPERExample */ = {
 			isa = PBXGroup;
 			children = (
+				E2EA402D28D09FCE0082C7C5 /* Constants */,
+				E2EA401328D08FE90082C7C5 /* Extension */,
 				FA839F7428CD498000F5F2C7 /* Worker */,
 				FA839F5828CD2E5A00F5F2C7 /* Scenes */,
 				FAD4E73628CD245E002D4A6F /* NetworkLayer */,
@@ -425,18 +541,30 @@
 				FA839F6828CD3EB100F5F2C7 /* UsersRouter.swift in Sources */,
 				FAD4E73A28CD2487002D4A6F /* UserRouter.swift in Sources */,
 				E247FC2E28CE330C007584C6 /* UserDetailsProtocol.swift in Sources */,
+				E2EA403128D0A09A0082C7C5 /* NetworkLayerRecipes.swift in Sources */,
 				FAE07E6628CD22C800A0FDD3 /* ViewController.swift in Sources */,
 				FA839F7628CD498A00F5F2C7 /* UserWorker.swift in Sources */,
+				E2EA402528D094130082C7C5 /* RecipeRouter.swift in Sources */,
+				E2EA402828D094280082C7C5 /* RecipeProtocols.swift in Sources */,
 				FA839F7128CD3FCB00F5F2C7 /* UsersProtocol.swift in Sources */,
 				FA839F7328CD429B00F5F2C7 /* UserViewController + Protocols .swift in Sources */,
+				E2EA402228D093FB0082C7C5 /* RecipeEntity.swift in Sources */,
+				E2EA401F28D093E90082C7C5 /* RecipePresenter.swift in Sources */,
+				E2EA401528D090030082C7C5 /* BaseNavigationController.swift in Sources */,
 				E247FC3028CE33E5007584C6 /* UserDetailsRouter.swift in Sources */,
 				FAE07E6228CD22C800A0FDD3 /* AppDelegate.swift in Sources */,
 				FA839F6B28CD3F0800F5F2C7 /* UsersPresenter.swift in Sources */,
 				FA839F6E28CD3F3700F5F2C7 /* UserInteractor.swift in Sources */,
+				E2EA402C28D09F330082C7C5 /* Extension + UISearchBar.swift in Sources */,
 				E247FC2528CE3253007584C6 /* UserDetailsViewController.swift in Sources */,
 				E247FC3428CE34C1007584C6 /* UserDetailsPresenter.swift in Sources */,
 				FA839F6528CD376F00F5F2C7 /* UserViewController + Delegates.swift in Sources */,
+				E2EA401928D093960082C7C5 /* RecipeViewController.swift in Sources */,
 				FAD4E73C28CD24A6002D4A6F /* Constants.swift in Sources */,
+				E2EA402A28D09DFF0082C7C5 /* Extension + UIViewController.swift in Sources */,
+				E2EA401C28D093D60082C7C5 /* RecipesInteractor.swift in Sources */,
+				E2EA403428D0C48B0082C7C5 /* RecipeCell.swift in Sources */,
+				E2EA403628D0C4A20082C7C5 /* PaginationSpinner.swift in Sources */,
 				FA839F5D28CD2ED200F5F2C7 /* UsersViewController.swift in Sources */,
 				FAD4E73828CD2476002D4A6F /* NetworkLayer.swift in Sources */,
 				FA839F6228CD369F00F5F2C7 /* UsersTableViewCell.swift in Sources */,
