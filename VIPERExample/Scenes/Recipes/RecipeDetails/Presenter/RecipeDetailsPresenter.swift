@@ -22,7 +22,22 @@ class RecipeDetailsPresenter: RecipeDetailsPresenterProtocol, RecipeDetailsInter
   }
   
   func viewDidLoad() {
-    
+    if let recipe = recipe {
+      if let title = recipe.label {
+        view?.setupNavigationTitle(title: title)
+      }
+      if let image = recipe.image {
+        view?.setupRecipeImage(image: image)
+      }
+      
+      if let publisherUrl = recipe.shareAs {
+        view?.setupRecipeUrl(stringUrl: publisherUrl)
+      }
+      
+      if let ingredients = recipe.ingredientLines {
+        view?.setupIngredientsTable(withData: ingredients)
+      }
+    }
   }
   
   

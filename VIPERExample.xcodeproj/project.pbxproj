@@ -23,6 +23,10 @@
 		E2E1204D28D212760023E45B /* RecipeDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1204C28D212760023E45B /* RecipeDetailsInteractor.swift */; };
 		E2E1204F28D213060023E45B /* RecipeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1204E28D213060023E45B /* RecipeDetailsPresenter.swift */; };
 		E2E1205128D214980023E45B /* RecipeDetailsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1205028D214980023E45B /* RecipeDetailsEntity.swift */; };
+		E2E1205328D21AFD0023E45B /* RecipeDetailsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1205228D21AFD0023E45B /* RecipeDetailsContainer.swift */; };
+		E2E1205528D22C990023E45B /* RecipeDetailsViewController + Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1205428D22C990023E45B /* RecipeDetailsViewController + Presenter.swift */; };
+		E2E1205728D22CBA0023E45B /* RecipeDetailsViewController + TabelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1205628D22CBA0023E45B /* RecipeDetailsViewController + TabelViewDelegate.swift */; };
+		E2E1205928D22CCE0023E45B /* IngredientsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1205828D22CCE0023E45B /* IngredientsHeaderView.swift */; };
 		E2EA401528D090030082C7C5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA401428D090030082C7C5 /* BaseNavigationController.swift */; };
 		E2EA401928D093960082C7C5 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA401828D093960082C7C5 /* RecipeViewController.swift */; };
 		E2EA401C28D093D60082C7C5 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA401B28D093D60082C7C5 /* RecipesInteractor.swift */; };
@@ -76,6 +80,10 @@
 		E2E1204C28D212760023E45B /* RecipeDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsInteractor.swift; sourceTree = "<group>"; };
 		E2E1204E28D213060023E45B /* RecipeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsPresenter.swift; sourceTree = "<group>"; };
 		E2E1205028D214980023E45B /* RecipeDetailsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsEntity.swift; sourceTree = "<group>"; };
+		E2E1205228D21AFD0023E45B /* RecipeDetailsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsContainer.swift; sourceTree = "<group>"; };
+		E2E1205428D22C990023E45B /* RecipeDetailsViewController + Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeDetailsViewController + Presenter.swift"; sourceTree = "<group>"; };
+		E2E1205628D22CBA0023E45B /* RecipeDetailsViewController + TabelViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeDetailsViewController + TabelViewDelegate.swift"; sourceTree = "<group>"; };
+		E2E1205828D22CCE0023E45B /* IngredientsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsHeaderView.swift; sourceTree = "<group>"; };
 		E2EA401428D090030082C7C5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		E2EA401828D093960082C7C5 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		E2EA401B28D093D60082C7C5 /* RecipesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInteractor.swift; sourceTree = "<group>"; };
@@ -222,6 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				E2E1204628D210990023E45B /* RecipeDetailsViewController.swift */,
+				E2E1205228D21AFD0023E45B /* RecipeDetailsContainer.swift */,
+				E2E1205428D22C990023E45B /* RecipeDetailsViewController + Presenter.swift */,
+				E2E1205628D22CBA0023E45B /* RecipeDetailsViewController + TabelViewDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +283,7 @@
 				E2EA401428D090030082C7C5 /* BaseNavigationController.swift */,
 				E2EA402928D09DFF0082C7C5 /* Extension + UIViewController.swift */,
 				E2EA402B28D09F330082C7C5 /* Extension + UISearchBar.swift */,
+				E2E1205828D22CCE0023E45B /* IngredientsHeaderView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -645,6 +657,7 @@
 				E247FC2E28CE330C007584C6 /* UserDetailsProtocol.swift in Sources */,
 				E2EA403128D0A09A0082C7C5 /* NetworkLayerRecipes.swift in Sources */,
 				FAE07E6628CD22C800A0FDD3 /* ViewController.swift in Sources */,
+				E2E1205728D22CBA0023E45B /* RecipeDetailsViewController + TabelViewDelegate.swift in Sources */,
 				E2E1203F28D20F940023E45B /* RecipesRouter.swift in Sources */,
 				FA839F7628CD498A00F5F2C7 /* UserWorker.swift in Sources */,
 				E2EA402528D094130082C7C5 /* RecipeRouter.swift in Sources */,
@@ -667,17 +680,20 @@
 				E247FC2528CE3253007584C6 /* UserDetailsViewController.swift in Sources */,
 				E247FC3428CE34C1007584C6 /* UserDetailsPresenter.swift in Sources */,
 				FA839F6528CD376F00F5F2C7 /* UserViewController + Delegates.swift in Sources */,
+				E2E1205528D22C990023E45B /* RecipeDetailsViewController + Presenter.swift in Sources */,
 				E2EA401928D093960082C7C5 /* RecipeViewController.swift in Sources */,
 				E2E1204928D2111D0023E45B /* RecipeDetailsProtocols.swift in Sources */,
 				FAD4E73C28CD24A6002D4A6F /* Constants.swift in Sources */,
 				E2EA402A28D09DFF0082C7C5 /* Extension + UIViewController.swift in Sources */,
 				E2EA401C28D093D60082C7C5 /* RecipesInteractor.swift in Sources */,
 				E2EA403428D0C48B0082C7C5 /* RecipeCell.swift in Sources */,
+				E2E1205928D22CCE0023E45B /* IngredientsHeaderView.swift in Sources */,
 				E2E1204D28D212760023E45B /* RecipeDetailsInteractor.swift in Sources */,
 				E2EA403628D0C4A20082C7C5 /* PaginationSpinner.swift in Sources */,
 				FA839F5D28CD2ED200F5F2C7 /* UsersViewController.swift in Sources */,
 				E2E1205128D214980023E45B /* RecipeDetailsEntity.swift in Sources */,
 				FAD4E73828CD2476002D4A6F /* NetworkLayer.swift in Sources */,
+				E2E1205328D21AFD0023E45B /* RecipeDetailsContainer.swift in Sources */,
 				FA839F6228CD369F00F5F2C7 /* UsersTableViewCell.swift in Sources */,
 				E2E1203828D1FB200023E45B /* RecipeView + SearchBar.swift in Sources */,
 				FAE07E6428CD22C800A0FDD3 /* SceneDelegate.swift in Sources */,

@@ -8,33 +8,25 @@
 import UIKit
 
 class RecipeDetailsViewController: UIViewController {
+  
   var presenter: RecipeDetailsPresenterProtocol!
- 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
- 
+  
+  lazy var mainView: RecipeDetailsContainer = {
+    var view = RecipeDetailsContainer()
+    return view
+  }()
+  
+  override func loadView() {
+    super.loadView()
+    view = mainView
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    presenter.viewDidLoad()
+    setupTableView()
+  }
 }
 
-extension RecipeDetailsViewController: RecipeDetailsViewProtocol {
-  
-  func setupNavigationTitle(title: String) {
-    
-  }
-  
-  func setupRecipeImage(image: String) {
-    
-  }
-  
-  func setupRecipeUrl(stringUrl: String) {
-    
-  }
-  
-  func setupIngredientsTable(withData: [String]) {
-    
-  }
-  
-  
-}
+
+
