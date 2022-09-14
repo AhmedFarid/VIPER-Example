@@ -10,108 +10,117 @@ import Kingfisher
 
 class RecipeCell: UITableViewCell {
   lazy var recipeImage: UIImageView = {
-      var iv = UIImageView()
-      iv.contentMode = .scaleAspectFill
-      iv.backgroundColor = .gray
-      //iv.image = R.image.freshhhhhh()
-      iv.clipsToBounds = true
-      iv.layer.cornerRadius = 12
-      iv.translatesAutoresizingMaskIntoConstraints = false
-      iv.kf.indicatorType = .activity
-      return iv
+    var iv = UIImageView()
+    iv.contentMode = .scaleAspectFill
+    iv.backgroundColor = .gray
+    iv.clipsToBounds = true
+    iv.layer.cornerRadius = 12
+    iv.translatesAutoresizingMaskIntoConstraints = false
+    iv.kf.indicatorType = .activity
+    return iv
   }()
+  
   lazy var stackView: UIStackView = {
-      var infoStack = UIStackView()
-      infoStack.distribution = .fill
-      infoStack.axis = .vertical
-      infoStack.alignment = .fill
-      infoStack.spacing = 2
-      infoStack.translatesAutoresizingMaskIntoConstraints = false
-      return infoStack
+    var infoStack = UIStackView()
+    infoStack.distribution = .fill
+    infoStack.axis = .vertical
+    infoStack.alignment = .fill
+    infoStack.spacing = 2
+    infoStack.translatesAutoresizingMaskIntoConstraints = false
+    return infoStack
   }()
+  
   lazy var recipeName: UILabel = {
-      var nameLabel = UILabel()
-      nameLabel.text = "Recipe Name"
-      nameLabel.numberOfLines = 2
-      nameLabel.textColor = .white
+    var nameLabel = UILabel()
+    nameLabel.text = "Recipe Name"
+    nameLabel.numberOfLines = 2
+    nameLabel.textColor = .white
     nameLabel.font = UIFont.systemFont(ofSize: 17)
-      nameLabel.translatesAutoresizingMaskIntoConstraints = false
-      return nameLabel
+    nameLabel.translatesAutoresizingMaskIntoConstraints = false
+    return nameLabel
   }()
+  
   lazy var recipeSource: UILabel = {
-      var sourceLabel = UILabel()
-      sourceLabel.text = "Recipe Source"
-      sourceLabel.textColor = .white
-      sourceLabel.font = UIFont.systemFont(ofSize: 14)
-      sourceLabel.translatesAutoresizingMaskIntoConstraints = false
-      return sourceLabel
+    var sourceLabel = UILabel()
+    sourceLabel.text = "Recipe Source"
+    sourceLabel.textColor = .white
+    sourceLabel.font = UIFont.systemFont(ofSize: 14)
+    sourceLabel.translatesAutoresizingMaskIntoConstraints = false
+    return sourceLabel
   }()
+  
   lazy var recipeHealthLabel: UILabel = {
-      var healthLabel = UILabel()
-      healthLabel.text = "Healeth label"
-      healthLabel.font = UIFont.systemFont(ofSize: 12)
-      healthLabel.numberOfLines = 0
-      healthLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-      healthLabel.translatesAutoresizingMaskIntoConstraints = false
-      return healthLabel
+    var healthLabel = UILabel()
+    healthLabel.text = "Health label"
+    healthLabel.font = UIFont.systemFont(ofSize: 12)
+    healthLabel.numberOfLines = 0
+    healthLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+    healthLabel.translatesAutoresizingMaskIntoConstraints = false
+    return healthLabel
   }()
-
+  
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-      super.init(style: style, reuseIdentifier: reuseIdentifier)
-      self.setupCellBehaviors()
-      self.layoutUserInterface()
+    super.init(style: style, reuseIdentifier: reuseIdentifier)
+    setupCellBehaviors()
+    layoutUserInterface()
   }
-
+  
   required init?(coder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
+    fatalError("init(coder:) has not been implemented")
   }
-
+  
   private func layoutUserInterface() {
-      self.addSubViews()
-      self.setupRecipeImage()
-      self.setupStackView()
-      self.addArrangedViews()
+    addSubViews()
+    setupRecipeImage()
+    setupStackView()
+    addArrangedViews()
   }
+  
   private func addSubViews() {
-      self.addSubview(self.recipeImage)
-      self.addSubview(self.stackView)
+    addSubview(recipeImage)
+    addSubview(stackView)
   }
+  
   private func setupRecipeImage() {
-      NSLayoutConstraint.activate([
-          self.recipeImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
-          self.recipeImage.heightAnchor.constraint(equalToConstant: 100),
-          self.recipeImage.widthAnchor.constraint(equalToConstant: 100),
-          self.recipeImage.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0)
-      ])
+    NSLayoutConstraint.activate([
+      recipeImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
+      recipeImage.heightAnchor.constraint(equalToConstant: 100),
+      recipeImage.widthAnchor.constraint(equalToConstant: 100),
+      recipeImage.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0)
+    ])
   }
+  
   private func setupStackView() {
-      NSLayoutConstraint.activate([
-          self.stackView.leftAnchor.constraint(equalTo: self.recipeImage.rightAnchor, constant: 8),
-          self.stackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-          self.stackView.centerYAnchor.constraint(equalTo: self.recipeImage.centerYAnchor, constant: 0),
-          self.stackView.heightAnchor.constraint(lessThanOrEqualToConstant: 100)
-      ])
+    NSLayoutConstraint.activate([
+      stackView.leftAnchor.constraint(equalTo: self.recipeImage.rightAnchor, constant: 8),
+      stackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
+      stackView.centerYAnchor.constraint(equalTo: self.recipeImage.centerYAnchor, constant: 0),
+      stackView.heightAnchor.constraint(lessThanOrEqualToConstant: 100)
+    ])
   }
-  private func addArrangedViews(){
-      self.stackView.addArrangedSubview(self.recipeName)
-      self.stackView.addArrangedSubview(self.recipeSource)
-      self.stackView.addArrangedSubview(self.recipeHealthLabel)
+  
+  private func addArrangedViews() {
+    stackView.addArrangedSubview(recipeName)
+    stackView.addArrangedSubview(recipeSource)
+    stackView.addArrangedSubview(recipeHealthLabel)
   }
+  
   private func setupCellBehaviors() {
-      self.backgroundColor = .clear
-      self.selectionStyle = .none
+    self.backgroundColor = .clear
+    self.selectionStyle = .none
   }
+  
 }
 
 
 extension RecipeCell : RecipesCellView {
   func configureRecipeCell(recipe: Hits) {
-      if let unwrappedRecipe = recipe.recipe {
-          recipeName.text = unwrappedRecipe.label ?? "No Name"
-          recipeSource.text = unwrappedRecipe.source ?? "No Source"
-          self.recipeImage.kf.setImage(with: URL(string: unwrappedRecipe.image ?? ""))
-          let reipeHealthText = unwrappedRecipe.healthLabels?.reduce("", {$0 + $1 + " - " })
-          self.recipeHealthLabel.text = reipeHealthText
-      }
+    if let recipe = recipe.recipe {
+      recipeName.text = recipe.label ?? ""
+      recipeSource.text = recipe.source ?? ""
+      recipeImage.kf.setImage(with: URL(string: recipe.image ?? ""))
+      let recipeHealthText = recipe.healthLabels?.reduce("", {$0 + $1 + " - "})
+      recipeHealthLabel.text = recipeHealthText
+    }
   }
 }
