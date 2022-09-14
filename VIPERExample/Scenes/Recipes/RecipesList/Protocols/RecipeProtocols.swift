@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 protocol RecipeViewProtocol: AnyObject {
     var presenter: RecipePresenterProtocol! {get set}
     func showActivityIndicator()

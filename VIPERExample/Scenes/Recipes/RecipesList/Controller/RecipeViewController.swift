@@ -9,7 +9,6 @@ import UIKit
 
 class RecipeViewController: UITableViewController {
   
-  
   var presenter: RecipePresenterProtocol!
   
   lazy var searchController = UISearchController(searchResultsController: nil)

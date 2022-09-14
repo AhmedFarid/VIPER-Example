@@ -51,10 +51,18 @@ extension RecipeViewController {
   }
   
   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    
+    if indexPath.item == presenter.numberOfRows() - 1 {
+      guard self.searchController.searchBar.text  != nil, self.searchController.searchBar.text != "" else {return}
+      presenter.willDisplayLastCell(keyWord: self.searchController.searchBar.text ?? "")
+    }else {
+      cell.alpha = 0
+      UIView.animate(withDuration: 0.8, delay: 0,usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [.allowUserInteraction, .curveEaseInOut], animations: {
+        cell.alpha = 1
+      },completion: nil)
+    }
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+    presenter.didSelect(AtIndexPath: indexPath)
   }
 }

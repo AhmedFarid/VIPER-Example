@@ -13,7 +13,8 @@ extension RecipeViewController: UISearchBarDelegate {
           presenter.searchData(withKeyWord: unwrappedKeyWord)
       }
   }
-  func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
-      presenter.clearDataSourceOnCancel()
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    presenter.clearDataSourceOnCancel()
   }
 }

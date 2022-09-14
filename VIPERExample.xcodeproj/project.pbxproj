@@ -16,6 +16,13 @@
 		E2E1203628D1F93C0023E45B /* RecipeView + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1203528D1F93C0023E45B /* RecipeView + TableView.swift */; };
 		E2E1203828D1FB200023E45B /* RecipeView + SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1203728D1FB200023E45B /* RecipeView + SearchBar.swift */; };
 		E2E1203A28D1FB610023E45B /* RecipeView + Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1203928D1FB610023E45B /* RecipeView + Presenter.swift */; };
+		E2E1203F28D20F940023E45B /* RecipesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1203E28D20F940023E45B /* RecipesRouter.swift */; };
+		E2E1204728D210990023E45B /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1204628D210990023E45B /* RecipeDetailsViewController.swift */; };
+		E2E1204928D2111D0023E45B /* RecipeDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1204828D2111D0023E45B /* RecipeDetailsProtocols.swift */; };
+		E2E1204B28D212200023E45B /* RecipeDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1204A28D212200023E45B /* RecipeDetailsRouter.swift */; };
+		E2E1204D28D212760023E45B /* RecipeDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1204C28D212760023E45B /* RecipeDetailsInteractor.swift */; };
+		E2E1204F28D213060023E45B /* RecipeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1204E28D213060023E45B /* RecipeDetailsPresenter.swift */; };
+		E2E1205128D214980023E45B /* RecipeDetailsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1205028D214980023E45B /* RecipeDetailsEntity.swift */; };
 		E2EA401528D090030082C7C5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA401428D090030082C7C5 /* BaseNavigationController.swift */; };
 		E2EA401928D093960082C7C5 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA401828D093960082C7C5 /* RecipeViewController.swift */; };
 		E2EA401C28D093D60082C7C5 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA401B28D093D60082C7C5 /* RecipesInteractor.swift */; };
@@ -62,6 +69,13 @@
 		E2E1203528D1F93C0023E45B /* RecipeView + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeView + TableView.swift"; sourceTree = "<group>"; };
 		E2E1203728D1FB200023E45B /* RecipeView + SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeView + SearchBar.swift"; sourceTree = "<group>"; };
 		E2E1203928D1FB610023E45B /* RecipeView + Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeView + Presenter.swift"; sourceTree = "<group>"; };
+		E2E1203E28D20F940023E45B /* RecipesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesRouter.swift; sourceTree = "<group>"; };
+		E2E1204628D210990023E45B /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		E2E1204828D2111D0023E45B /* RecipeDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsProtocols.swift; sourceTree = "<group>"; };
+		E2E1204A28D212200023E45B /* RecipeDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsRouter.swift; sourceTree = "<group>"; };
+		E2E1204C28D212760023E45B /* RecipeDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsInteractor.swift; sourceTree = "<group>"; };
+		E2E1204E28D213060023E45B /* RecipeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsPresenter.swift; sourceTree = "<group>"; };
+		E2E1205028D214980023E45B /* RecipeDetailsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsEntity.swift; sourceTree = "<group>"; };
 		E2EA401428D090030082C7C5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		E2EA401828D093960082C7C5 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		E2EA401B28D093D60082C7C5 /* RecipesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInteractor.swift; sourceTree = "<group>"; };
@@ -173,6 +187,85 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		E2E1203B28D20F480023E45B /* RecipeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E2E1204028D210120023E45B /* Controller */,
+				E2E1204128D210170023E45B /* Interactor */,
+				E2E1204228D2101D0023E45B /* Presenter */,
+				E2E1204328D210220023E45B /* Entity */,
+				E2E1204428D210270023E45B /* Router */,
+				E2E1204528D2102D0023E45B /* Protocols */,
+			);
+			path = RecipeDetails;
+			sourceTree = "<group>";
+		};
+		E2E1203C28D20F520023E45B /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA401628D0937A0082C7C5 /* RecipesList */,
+				E2E1203B28D20F480023E45B /* RecipeDetails */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		E2E1203D28D20F5E0023E45B /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				FA839F5928CD2E8A00F5F2C7 /* UsersList */,
+				E247FC2128CE3217007584C6 /* UserDetails */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		E2E1204028D210120023E45B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2E1204628D210990023E45B /* RecipeDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2E1204128D210170023E45B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E2E1204C28D212760023E45B /* RecipeDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E2E1204228D2101D0023E45B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E2E1204E28D213060023E45B /* RecipeDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E2E1204328D210220023E45B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E2E1205028D214980023E45B /* RecipeDetailsEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E2E1204428D210270023E45B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E2E1204A28D212200023E45B /* RecipeDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E2E1204528D2102D0023E45B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E2E1204828D2111D0023E45B /* RecipeDetailsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		E2EA401328D08FE90082C7C5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +276,7 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		E2EA401628D0937A0082C7C5 /* Recipes */ = {
+		E2EA401628D0937A0082C7C5 /* RecipesList */ = {
 			isa = PBXGroup;
 			children = (
 				E2EA401728D093820082C7C5 /* Controller */,
@@ -193,7 +286,7 @@
 				E2EA402328D094040082C7C5 /* Router */,
 				E2EA402628D094180082C7C5 /* Protocols */,
 			);
-			path = Recipes;
+			path = RecipesList;
 			sourceTree = "<group>";
 		};
 		E2EA401728D093820082C7C5 /* Controller */ = {
@@ -268,14 +361,13 @@
 		FA839F5828CD2E5A00F5F2C7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				E2EA401628D0937A0082C7C5 /* Recipes */,
-				E247FC2128CE3217007584C6 /* UserDetails */,
-				FA839F5928CD2E8A00F5F2C7 /* Users */,
+				E2E1203C28D20F520023E45B /* Recipes */,
+				E2E1203D28D20F5E0023E45B /* Users */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		FA839F5928CD2E8A00F5F2C7 /* Users */ = {
+		FA839F5928CD2E8A00F5F2C7 /* UsersList */ = {
 			isa = PBXGroup;
 			children = (
 				FA839F6F28CD3FB100F5F2C7 /* Protocol */,
@@ -284,7 +376,7 @@
 				FA839F6928CD3EF600F5F2C7 /* Presenter */,
 				FA839F5A28CD2EB000F5F2C7 /* ViewController */,
 			);
-			path = Users;
+			path = UsersList;
 			sourceTree = "<group>";
 		};
 		FA839F5A28CD2EB000F5F2C7 /* ViewController */ = {
@@ -364,6 +456,7 @@
 			children = (
 				FAD4E73728CD2476002D4A6F /* NetworkLayer.swift */,
 				FAD4E73928CD2487002D4A6F /* UserRouter.swift */,
+				E2E1203E28D20F940023E45B /* RecipesRouter.swift */,
 				E2EA403028D0A09A0082C7C5 /* NetworkLayerRecipes.swift */,
 			);
 			path = NetworkLayer;
@@ -552,10 +645,12 @@
 				E247FC2E28CE330C007584C6 /* UserDetailsProtocol.swift in Sources */,
 				E2EA403128D0A09A0082C7C5 /* NetworkLayerRecipes.swift in Sources */,
 				FAE07E6628CD22C800A0FDD3 /* ViewController.swift in Sources */,
+				E2E1203F28D20F940023E45B /* RecipesRouter.swift in Sources */,
 				FA839F7628CD498A00F5F2C7 /* UserWorker.swift in Sources */,
 				E2EA402528D094130082C7C5 /* RecipeRouter.swift in Sources */,
 				E2EA402828D094280082C7C5 /* RecipeProtocols.swift in Sources */,
 				FA839F7128CD3FCB00F5F2C7 /* UsersProtocol.swift in Sources */,
+				E2E1204728D210990023E45B /* RecipeDetailsViewController.swift in Sources */,
 				FA839F7328CD429B00F5F2C7 /* UserViewController + Protocols .swift in Sources */,
 				E2EA402228D093FB0082C7C5 /* RecipeEntity.swift in Sources */,
 				E2EA401F28D093E90082C7C5 /* RecipePresenter.swift in Sources */,
@@ -565,18 +660,23 @@
 				FAE07E6228CD22C800A0FDD3 /* AppDelegate.swift in Sources */,
 				FA839F6B28CD3F0800F5F2C7 /* UsersPresenter.swift in Sources */,
 				FA839F6E28CD3F3700F5F2C7 /* UserInteractor.swift in Sources */,
+				E2E1204B28D212200023E45B /* RecipeDetailsRouter.swift in Sources */,
+				E2E1204F28D213060023E45B /* RecipeDetailsPresenter.swift in Sources */,
 				E2E1203A28D1FB610023E45B /* RecipeView + Presenter.swift in Sources */,
 				E2EA402C28D09F330082C7C5 /* Extension + UISearchBar.swift in Sources */,
 				E247FC2528CE3253007584C6 /* UserDetailsViewController.swift in Sources */,
 				E247FC3428CE34C1007584C6 /* UserDetailsPresenter.swift in Sources */,
 				FA839F6528CD376F00F5F2C7 /* UserViewController + Delegates.swift in Sources */,
 				E2EA401928D093960082C7C5 /* RecipeViewController.swift in Sources */,
+				E2E1204928D2111D0023E45B /* RecipeDetailsProtocols.swift in Sources */,
 				FAD4E73C28CD24A6002D4A6F /* Constants.swift in Sources */,
 				E2EA402A28D09DFF0082C7C5 /* Extension + UIViewController.swift in Sources */,
 				E2EA401C28D093D60082C7C5 /* RecipesInteractor.swift in Sources */,
 				E2EA403428D0C48B0082C7C5 /* RecipeCell.swift in Sources */,
+				E2E1204D28D212760023E45B /* RecipeDetailsInteractor.swift in Sources */,
 				E2EA403628D0C4A20082C7C5 /* PaginationSpinner.swift in Sources */,
 				FA839F5D28CD2ED200F5F2C7 /* UsersViewController.swift in Sources */,
+				E2E1205128D214980023E45B /* RecipeDetailsEntity.swift in Sources */,
 				FAD4E73828CD2476002D4A6F /* NetworkLayer.swift in Sources */,
 				FA839F6228CD369F00F5F2C7 /* UsersTableViewCell.swift in Sources */,
 				E2E1203828D1FB200023E45B /* RecipeView + SearchBar.swift in Sources */,

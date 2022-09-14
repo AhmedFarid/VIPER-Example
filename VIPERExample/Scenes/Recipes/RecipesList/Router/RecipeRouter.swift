@@ -21,8 +21,9 @@ class RecipeRouter: RecipeRouterProtocol {
   }
 
   func navigateToDetailsView(withRecipe: Recipe) {
-//      let recipesDetailsView = RecipeDetailsRouter.createAnModule(with: withRecipe)
-//      viewController?.navigationController?.pushViewController(recipesDetailsView, animated: true)
+    let recipesDetailsView = RecipeDetailsRouter.createAnModule(with: withRecipe)
+    viewController?.navigationController?.pushViewController(recipesDetailsView, animated: true)
+
   }
   
 

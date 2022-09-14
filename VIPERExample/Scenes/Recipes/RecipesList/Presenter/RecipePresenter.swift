@@ -39,14 +39,6 @@ class RecipePresenter: RecipePresenterProtocol, RecipeInteractorOutPutProtocol {
     interactor.searchRecipe(withKeyWord: withKeyWord, fromPage: self.lastPage, toPage: self.toPage)
   }
   
-  func numberOfRows() -> Int {
-    return self.recipesHits.count
-  }
-  
-  func configure(recipesCell cell: RecipesCellView, AtIndexPath indexPath: IndexPath) {
-    cell.configureRecipeCell(recipe: self.recipesHits[indexPath.item])
-  }
-  
   func fetchedRecipeSucsessfully(recipes: [Hits]) {
     self.recipesHits = recipes
     view?.reloadTableView()
@@ -57,6 +49,18 @@ class RecipePresenter: RecipePresenterProtocol, RecipeInteractorOutPutProtocol {
     view?.hideActivityIndicator()
   }
   
+  func numberOfRows() -> Int {
+    return self.recipesHits.count
+  }
+  
+  func getLastIndex(index: Int) {
+    self.lastPage = index
+  }
+  
+  func configure(recipesCell cell: RecipesCellView, AtIndexPath indexPath: IndexPath) {
+    cell.configureRecipeCell(recipe: self.recipesHits[indexPath.item])
+  }
+  
   func failedToFetchRecipes(stringError err: String) {
     view?.dismissSearchController()
     view?.hideActivityIndicator()
@@ -64,26 +68,29 @@ class RecipePresenter: RecipePresenterProtocol, RecipeInteractorOutPutProtocol {
   }
   
   func clearDataSourceOnCancel() {
-    
+    view?.showActivityIndicator()
+    self.recipesHits.removeAll()
+    view?.reloadTableView()
+    view?.hideActivityIndicator()
   }
   
   func willDisplayLastCell(keyWord: String) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+      guard self.toPage - self.lastPage == 15 else { return }
+      self.interactor.loadMore(withKeyWord: keyWord, fromPage: self.lastPage, toPage: self.toPage)
+    }
   
-  }
-  
-  func didSelect(AtIndexPath indexPath: IndexPath) {
-    
-  }
-  
-  
-  
-  func getLastIndex(index: Int) {
-    
   }
   
   func fetchedMoreRecipes(newRecipes: [Hits]) {
-    
+    newRecipes.forEach({ self.recipesHits.append($0)})
+    view?.reloadTableView()
   }
-
+  
+  func didSelect(AtIndexPath indexPath: IndexPath) {
+    if let recipe = self.recipesHits[indexPath.item].recipe {
+      router.navigateToDetailsView(withRecipe: recipe)
+    }
+  }
   
 }

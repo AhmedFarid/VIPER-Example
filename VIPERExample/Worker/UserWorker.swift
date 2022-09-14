@@ -10,7 +10,6 @@ import Foundation
 class UserWorker {
   private let networkLayer = NetworkLayer()
   
-  
   func getUsers(completionHandler: @escaping (Result<[User]>) -> ()) {
     networkLayer.request(UserRouter.get, decodeToType: [User].self, completionHandler: completionHandler)
   }
